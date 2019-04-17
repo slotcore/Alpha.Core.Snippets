@@ -1,0 +1,35 @@
+﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>PropertyRelationalEntityModel</Title>
+    <Author>Jose Chacon</Author>
+    <Description>Define una Propiedad para un objeto ViewModel.</Description>
+    <Shortcut>alppropertyrel</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>EntityName</ID>
+        <ToolTip>Reemplazar por el Nombre de la propiedad</ToolTip>
+        <Default>EntityName</Default>
+      </Literal>
+      <Literal>
+        <ID>TipoPropiedad</ID>
+        <ToolTip>Reemplazar por el Tipo de Dato</ToolTip>
+        <Default>int</Default>
+      </Literal>
+      <Literal>
+        <ID>DisplayName</ID>
+        <ToolTip>Reemplazar por el Tipo de Data de Dato</ToolTip>
+        <Default>DisplayName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+      <![CDATA[      
+        [Display(Name = "$DisplayName$")]
+        public $TipoPropiedad$ Id$EntityName$ { get; set; }
+
+        [JsonIgnore]
+        public virtual $EntityName$ $EntityName$ { get; set; }]]>
+    </Code>
+  </Snippet>  
+</CodeSnippet>

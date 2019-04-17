@@ -1,0 +1,95 @@
+﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Model</Title>
+    <Author>Jose Chacon</Author>
+    <Description>Define un Modelo con EntityFramework</Description>
+    <Shortcut>alpmdl</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>Model</ID>
+        <ToolTip>Reemplazar por el Nombre del modelo</ToolTip>
+        <Default>Model</Default>
+      </Literal>
+      <Literal>
+        <ID>TipoDato1</ID>
+        <ToolTip>Reemplazar por el Tipo de Dato1</ToolTip>
+        <Default>string</Default>
+      </Literal>
+      <Literal>
+        <ID>Propiedad1</ID>
+        <ToolTip>Reemplazar por el Nombre de la Propiedad1</ToolTip>
+        <Default>Code</Default>
+      </Literal>
+      <Literal>
+        <ID>DescripcionProp1</ID>
+        <ToolTip>Reemplazar por el DisplayName de la Propiedad 1</ToolTip>
+        <Default>Código</Default>
+      </Literal>
+      <Literal>
+        <ID>TipoDato2</ID>
+        <ToolTip>Reemplazar por el Tipo de Dato2</ToolTip>
+        <Default>string</Default>
+      </Literal>
+      <Literal>
+        <ID>Propiedad2</ID>
+        <ToolTip>Reemplazar por el Nombre de la Propiedad2</ToolTip>
+        <Default>Name</Default>
+      </Literal>
+      <Literal>
+        <ID>DescripcionProp2</ID>
+        <ToolTip>Reemplazar por el DisplayName de la Propiedad 2</ToolTip>
+        <Default>Nombre</Default>
+      </Literal>
+      <Literal>
+        <ID>LibraryName</ID>
+        <ToolTip>Nombre del esquema</ToolTip>
+        <Default>AdministracionRuta.Common</Default>
+      </Literal>
+      <Literal>
+        <ID>EsquemaName</ID>
+        <ToolTip>Nombre del esquema</ToolTip>
+        <Default>Application</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+      <![CDATA[using AdministracionRuta.Common.Base;
+using Newtonsoft.Json;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace $LibraryName$.Models.$EsquemaName$
+{
+    [Table("$Model$s")]
+    public class $Model$ : EntityBase
+    {
+        #region Constructor
+        public $Model$() : base()
+        {
+        }
+        #endregion
+
+        #region Propiedades
+        [Key]
+        public int Id$Model$ { get; set; }
+
+        [Display(Name = "$DescripcionProp1$")]
+        public $TipoDato1$ $Propiedad1$ { get; set; }
+
+        [Display(Name = "$DescripcionProp2$")]
+        public $TipoDato2$ $Propiedad2$ { get; set; }
+        #endregion
+        
+        #region Propiedades Foraneas
+        #endregion
+        
+        #region Propiedades Relacionales
+        #endregion
+    }
+}
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

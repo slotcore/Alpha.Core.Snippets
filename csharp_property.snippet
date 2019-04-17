@@ -1,0 +1,32 @@
+﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>property</Title>
+    <Author>Jose Chacon</Author>
+    <Description>Define una Propiedad para un objeto ViewModel.</Description>
+    <Shortcut>alpproperty</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>Propiedad</ID>
+        <ToolTip>Reemplazar por el Nombre de la propiedad</ToolTip>
+        <Default>Description</Default>
+      </Literal>
+      <Literal>
+        <ID>TipoDato</ID>
+        <ToolTip>Reemplazar por el Tipo de Dato</ToolTip>
+        <Default>string</Default>
+      </Literal>
+      <Literal>
+        <ID>DisplayName</ID>
+        <ToolTip>Reemplazar por el Tipo de Data de Dato</ToolTip>
+        <Default>Descripción</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+      <![CDATA[      
+        [Display(Name = "$DisplayName$")]
+        public $TipoDato$ $Propiedad$ { get; set; }]]>
+    </Code>
+  </Snippet>  
+</CodeSnippet>

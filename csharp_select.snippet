@@ -1,0 +1,26 @@
+﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Controller-AddSelect</Title>
+    <Author>Jose Chacon</Author>
+    <Description>Define las acciones basicas de un controlador</Description>
+    <Shortcut>alpselect</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>ModelName</ID>
+        <ToolTip>Nombre del modelo</ToolTip>
+        <Default>ModelName</Default>
+      </Literal>
+      <Literal>
+        <ID>PropertyName</ID>
+        <ToolTip>Nombre de la propiedad descripcion</ToolTip>
+        <Default>Name</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+      <![CDATA[
+            ViewData["Id$ModelName$"] = new SelectList(Context.$ModelName$s, "Id$ModelName$", "$PropertyName$", model.Id$ModelName$);]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

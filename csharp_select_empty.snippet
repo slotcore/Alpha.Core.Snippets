@@ -1,0 +1,26 @@
+﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Controller-AddEmptySelect</Title>
+    <Author>Jose Chacon</Author>
+    <Description>Agrega un bloque select vacio</Description>
+    <Shortcut>alpselectempty</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>ModelName</ID>
+        <ToolTip>Nombre del modelo</ToolTip>
+        <Default>ModelName</Default>
+      </Literal>
+      <Literal>
+        <ID>PropertyName</ID>
+        <ToolTip>Nombre de la propiedad descripcion</ToolTip>
+        <Default>Nombre</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+      <![CDATA[
+            ViewData["Id$ModelName$"] = new SelectList(new List<string>(), "Id$ModelName$", "$PropertyName$");]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

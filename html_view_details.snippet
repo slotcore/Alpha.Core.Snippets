@@ -2,7 +2,7 @@
   <Header>
     <Title>ViewDetails</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>vwdetails</Shortcut>
+    <Shortcut>alpviewdtls</Shortcut>
     <Description>Agrega una página de detalle para un modelo</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -44,12 +44,12 @@
       <Literal>
         <ID>PropName1</ID>
         <ToolTip>Nombre de la propiedad 1</ToolTip>
-        <Default>Codigo</Default>
+        <Default>Code</Default>
       </Literal>
       <Literal>
         <ID>PropName2</ID>
         <ToolTip>Nombre de la propiedad 2</ToolTip>
-        <Default>Nombre</Default>
+        <Default>Name</Default>
       </Literal>
       <Literal>
         <ID>ModelDetailDescription</ID>
@@ -64,12 +64,12 @@
       <Literal>
         <ID>PropNameDetail1</ID>
         <ToolTip>Nombre de la propiedad 1 del detalle</ToolTip>
-        <Default>Codigo</Default>
+        <Default>Code</Default>
       </Literal>
       <Literal>
         <ID>PropNameDetail2</ID>
         <ToolTip>Nombre de la propiedad 2 del detalle</ToolTip>
-        <Default>Nombre</Default>
+        <Default>Name</Default>
       </Literal>
     </Declarations>
     <Code Language="html">
@@ -120,7 +120,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="btn-group">
-                                <a asp-action="$ModelName$Edit" asp-route-id="@Model.Id$ModelName$" class="btn sbold yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
+                                <a asp-action="$ModelName$Edit" asp-route-id="@Model.$ModelName$Id" class="btn sbold yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
                                     <span class="ladda-label">Modificar <i class="icon-wrench"></i></span>
                                 </a>
                             </div>
@@ -169,7 +169,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="btn-group">
-                                            <a asp-action="$ModelDetailName$Create" asp-route-id="@Model.Id$ModelName$" class="btn sbold green mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
+                                            <a asp-action="$ModelDetailName$Create" asp-route-id="@Model.$ModelName$Id" class="btn sbold green mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
                                                 <span class="ladda-label">Agregar Nuevo <i class="fa fa-plus"></i></span>
                                             </a>
                                         </div>
@@ -206,14 +206,14 @@
                                               </td>
                                               <td>
                                                   <div class="btn-group" role="group" aria-label="...">
-                                                          <a asp-action="$ModelDetailName$Details" asp-route-id="@item.Id$ModelDetailName$" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles">
+                                                          <a asp-action="$ModelDetailName$Details" asp-route-id="@item.$ModelDetailName$Id" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles">
                                                               <span class="ladda-label"><i class="icon-notebook"></i></span>
                                                           </a>
-                                                          <a asp-action="$ModelDetailName$Edit" asp-route-id="@item.Id$ModelDetailName$" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar">
+                                                          <a asp-action="$ModelDetailName$Edit" asp-route-id="@item.$ModelDetailName$Id" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar">
                                                               <span class="ladda-label"><i class="icon-wrench"></i></span>
                                                           </a>
                                                           <button class="btn btn-default mt-sweetalert red" data-toggle="tooltip" title="Eliminar" data-title="¿Está seguro de eliminar este registro?" data-type="warning" data-allow-outside-click="true" data-show-confirm-button="true" data-show-cancel-button="true"
-                                                                  data-url-action="@Url.Action("$ModelDetailName$Delete", new { id = item.Id$ModelDetailName$ })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
+                                                                  data-url-action="@Url.Action("$ModelDetailName$Delete", new { id = item.$ModelDetailName$Id })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
                                                               <i class="icon-trash"></i>
                                                           </button>
                                                   </div>

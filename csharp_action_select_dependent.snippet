@@ -1,9 +1,9 @@
 ﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>Controller-AddEmptySelect</Title>
+    <Title>ActionSelectDependent</Title>
     <Author>Jose Chacon</Author>
     <Description>Agrega un bloque select vacio</Description>
-    <Shortcut>alpselectempty</Shortcut>
+    <Shortcut>alpactionslctdpndnt</Shortcut>
   </Header>
   <Snippet>
     <Declarations>
@@ -17,10 +17,19 @@
         <ToolTip>Nombre de la propiedad descripcion</ToolTip>
         <Default>Nombre</Default>
       </Literal>
+      <Literal>
+        <ID>ModelDependentName</ID>
+        <ToolTip>Nombre del modelo</ToolTip>
+        <Default>ModelDependentName</Default>
+      </Literal>
     </Declarations>
     <Code Language="csharp">
       <![CDATA[
-            ViewData["Id$ModelName$"] = new SelectList(new List<string>(), "Id$ModelName$", "$PropertyName$");]]>
+            if (model.$ModelDependentName$Id != null)
+                ViewData["$ModelName$Id"] = new SelectList(Context.$ModelName$s
+                    .Where(o => o.$ModelDependentName$Id == model.$ModelDependentName$Id), "$ModelName$Id", "Name", model.$ModelName$Id);
+            else
+                ViewData["$ModelName$Id"] = new SelectList(new List<string>(), "$ModelName$Id", "Name");]]>
     </Code>
   </Snippet>
 </CodeSnippet>

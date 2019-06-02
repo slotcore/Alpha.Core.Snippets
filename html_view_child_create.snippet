@@ -2,7 +2,7 @@
   <Header>
     <Title>ViewChildCreate</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>vwchldcrt</Shortcut>
+    <Shortcut>alpviewchldcrt</Shortcut>
     <Description>Agrega una página de creación para un modelo hijo</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -91,7 +91,7 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a asp-action="$ModelParentName$Details" asp-route-id="@Model.Id$ModelParentName$">$ModelParentDescription$ (@Model.$ModelParentName$.$PropParentName$)</a>
+        <a asp-action="$ModelParentName$Details" asp-route-id="@Model.$ModelParentName$Id">$ModelParentDescription$ (@Model.$ModelParentName$.$PropParentName$)</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
@@ -106,7 +106,7 @@
         <div class="portlet light form-fit bordered">
             <div class="portlet-title">
                 <div class="caption font-red-sunglo">
-                    <a asp-action="$ModelParentName$Details" asp-roue-id="@Model.Id$ModelParentName$" class="btn btn-icon-only btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Regresar">
+                    <a asp-action="$ModelParentName$Details" asp-roue-id="@Model.$ModelParentName$Id" class="btn btn-icon-only btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Regresar">
                         <span class="ladda-label"><i class="fa fa-angle-left"></i></span>
                     </a>
                     <span class="caption-subject bold uppercase"> @ViewData["Title"]</span>
@@ -116,7 +116,7 @@
                 <form asp-action="$ModelName$Create" class="form-horizontal form-bordered" role="form">
                     <div class="form-body">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="Id$ModelParentName$" />
+                        <input type="hidden" asp-for="$ModelParentName$Id" />
 
                         <div class="form-group">
                             <label asp-for="$PropName1$" class="control-label col-md-3"></label>

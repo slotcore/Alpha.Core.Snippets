@@ -1,8 +1,8 @@
 ﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>PortletTabContent</Title>
+    <Title>FormTabContent</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>alpvwtabcontent</Shortcut>
+    <Shortcut>alpformtabcntnt</Shortcut>
     <Description>Agrega un bloque tabcontent para ASP.Net Core</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -77,7 +77,7 @@
                                     <div class="table-toolbar">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <a asp-action="$ModelName1$Create" asp-route-id="@Model.Id$ModelParentName$" class="btn sbold green mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
+                                                <a asp-action="$ModelName1$Create" asp-route-id="@Model.$ModelParentName$Id" class="btn sbold green mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
                                                     <span class="ladda-label">Agregar Nuevo <i class="fa fa-plus"></i></span>
                                                 </a>
                                             </div>
@@ -113,10 +113,10 @@
                                                         </td>
                                                         <td>
                                                             <div class="btn-group" role="group" aria-label="...">
-                                                                <a asp-action="$ModelName1$Details" asp-route-id="@item.Id$ModelName1$" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles"><span class="ladda-label"><i class="icon-notebook"></i></span></a>
-                                                                <a asp-action="$ModelName1$Edit" asp-route-id="@item.Id$ModelName1$" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar"><span class="ladda-label"><i class="icon-wrench"></i></span></a>
+                                                                <a asp-action="$ModelName1$Details" asp-route-id="@item.$ModelName1$Id" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles"><span class="ladda-label"><i class="icon-notebook"></i></span></a>
+                                                                <a asp-action="$ModelName1$Edit" asp-route-id="@item.$ModelName1$Id" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar"><span class="ladda-label"><i class="icon-wrench"></i></span></a>
                                                                 <button class="btn btn-default mt-sweetalert red" data-toggle="tooltip" title="Eliminar" data-title="¿Está seguro de eliminar este registro?" data-type="warning" data-allow-outside-click="true" data-show-confirm-button="true" data-show-cancel-button="true"
-                                                                        data-url-action="@Url.Action("$ModelName1$Delete", new { id = item.Id$ModelName1$ })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
+                                                                        data-url-action="@Url.Action("$ModelName1$Delete", new { id = item.$ModelName1$Id })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
                                                                     <i class="icon-trash"></i>
                                                                 </button>
                                                             </div>
@@ -133,7 +133,7 @@
                                     <div class="table-toolbar">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <a asp-action="$ModelName2$Create" asp-route-id="@Model.Id$ModelParentName$" class="btn sbold green mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
+                                                <a asp-action="$ModelName2$Create" asp-route-id="@Model.$ModelParentName$Id" class="btn sbold green mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333">
                                                     <span class="ladda-label">Agregar Nuevo <i class="fa fa-plus"></i></span>
                                                 </a>
                                             </div>
@@ -169,10 +169,10 @@
                                                         </td>
                                                         <td>
                                                             <div class="btn-group" role="group" aria-label="...">
-                                                                <a asp-action="$ModelName2$Details" asp-route-id="@item.Id$ModelName2$" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles"><span class="ladda-label"><i class="icon-notebook"></i></span></a>
-                                                                <a asp-action="$ModelName2$Edit" asp-route-id="@item.Id$ModelName2$" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar"><span class="ladda-label"><i class="icon-wrench"></i></span></a>
+                                                                <a asp-action="$ModelName2$Details" asp-route-id="@item.$ModelName2$Id" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles"><span class="ladda-label"><i class="icon-notebook"></i></span></a>
+                                                                <a asp-action="$ModelName2$Edit" asp-route-id="@item.$ModelName2$Id" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar"><span class="ladda-label"><i class="icon-wrench"></i></span></a>
                                                                 <button class="btn btn-default mt-sweetalert red" data-toggle="tooltip" title="Eliminar" data-title="¿Está seguro de eliminar este registro?" data-type="warning" data-allow-outside-click="true" data-show-confirm-button="true" data-show-cancel-button="true"
-                                                                        data-url-action="@Url.Action("$ModelName2$Delete", new { id = item.Id$ModelName2$ })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
+                                                                        data-url-action="@Url.Action("$ModelName2$Delete", new { id = item.$ModelName2$Id })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
                                                                     <i class="icon-trash"></i>
                                                                 </button>
                                                             </div>

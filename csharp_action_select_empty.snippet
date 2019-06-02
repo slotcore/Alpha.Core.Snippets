@@ -1,9 +1,9 @@
 ﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>Controller-AddSelect</Title>
+    <Title>ActionSelectEmpty</Title>
     <Author>Jose Chacon</Author>
-    <Description>Define las acciones basicas de un controlador</Description>
-    <Shortcut>alpselect</Shortcut>
+    <Description>Agrega un bloque select vacio</Description>
+    <Shortcut>alpactnselectempty</Shortcut>
   </Header>
   <Snippet>
     <Declarations>
@@ -15,12 +15,12 @@
       <Literal>
         <ID>PropertyName</ID>
         <ToolTip>Nombre de la propiedad descripcion</ToolTip>
-        <Default>Name</Default>
+        <Default>Nombre</Default>
       </Literal>
     </Declarations>
     <Code Language="csharp">
       <![CDATA[
-            ViewData["Id$ModelName$"] = new SelectList(Context.$ModelName$s, "Id$ModelName$", "$PropertyName$", model.Id$ModelName$);]]>
+            ViewData["$ModelName$Id"] = new SelectList(new List<string>(), "$ModelName$Id", "$PropertyName$");]]>
     </Code>
   </Snippet>
 </CodeSnippet>

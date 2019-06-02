@@ -1,17 +1,12 @@
 ﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>Context-AddDbSet</Title>
+    <Title>ContextDbSet</Title>
     <Author>Jose Chacon</Author>
     <Description>Agrega un bloque select vacio</Description>
-    <Shortcut>alpdbset</Shortcut>
+    <Shortcut>alpcntxtdbset</Shortcut>
   </Header>
   <Snippet>
     <Declarations>
-      <Literal>
-        <ID>EsquemaName</ID>
-        <ToolTip>Nombre del dominio</ToolTip>
-        <Default>AdministracionRuta.Common.Base.Models.Master</Default>
-      </Literal>
       <Literal>
         <ID>ModelName</ID>
         <ToolTip>Nombre del modelo</ToolTip>
@@ -20,7 +15,7 @@
     </Declarations>
     <Code Language="csharp">
       <![CDATA[
-        public DbSet<$EsquemaName$.$ModelName$> $ModelName$s { get; set; }]]>
+        public DbSet<$ModelName$> $ModelName$s { get; set; }]]>
     </Code>
   </Snippet>
 </CodeSnippet>

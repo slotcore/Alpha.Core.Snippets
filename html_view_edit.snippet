@@ -2,7 +2,7 @@
   <Header>
     <Title>ViewEdit</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>alpvwedit</Shortcut>
+    <Shortcut>alpviewedt</Shortcut>
     <Description>Agrega una página de edición para un modelo</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -109,7 +109,7 @@
                 <form asp-action="MenuEdit" class="form-horizontal" role="form">
                     <div class="form-body">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="Id$ModelName$" />
+                        <input type="hidden" asp-for="$ModelName$Id" />
 
                         <div class="form-group">
                             <label asp-for="$PropName1$" class="control-label col-md-3"></label>

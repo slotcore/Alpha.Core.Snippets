@@ -1,8 +1,8 @@
 ﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>Form-Group-Select</Title>
+    <Title>FormGroupSelect</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>alpgrpselect</Shortcut>
+    <Shortcut>alpformgrpselect</Shortcut>
     <Description>Agrega un bloque form-group select</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -20,9 +20,9 @@
     <Code Language="html">
       <![CDATA[
                         <div class="form-group">
-                            <label asp-for="Id$ModelName$" class="control-label col-md-3"></label>
+                            <label asp-for="$ModelName$Id" class="control-label col-md-3"></label>
                             <div class="col-md-4">
-                                <select asp-for="Id$ModelName$" asp-items="ViewBag.Id$ModelName$" class="form-control bs-select" data_live_search = "true" data_size = "8">
+                                <select asp-for="$ModelName$Id" asp-items="ViewBag.$ModelName$Id" class="form-control bs-select" data_live_search = "true" data_size = "8">
                                     <option>--Seleccione--</option>
                                 </select>
                             </div>

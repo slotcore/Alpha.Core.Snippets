@@ -2,7 +2,7 @@
   <Header>
     <Title>ViewIndex</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>alpvwindex</Shortcut>
+    <Shortcut>alpviewindx</Shortcut>
     <Description>Agrega una página de inicio para un modelo</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -122,14 +122,14 @@
                                 </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="...">
-                                      <a asp-action="$ModelName$Details" asp-route-id="@item.Id$ModelName$" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles">
+                                      <a asp-action="$ModelName$Details" asp-route-id="@item.$ModelName$Id" class="btn btn-default mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Detalles">
                                           <span class="ladda-label"><i class="icon-notebook"></i></span>
                                       </a>
-                                      <a asp-action="$ModelName$Edit" asp-route-id="@item.Id$ModelName$" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar">
+                                      <a asp-action="$ModelName$Edit" asp-route-id="@item.$ModelName$Id" class="btn btn-default yellow-crusta mt-ladda-btn ladda-button" data-style="zoom-in" data-spinner-color="#333" data-toggle="tooltip" title="Modificar">
                                           <span class="ladda-label"><i class="icon-wrench"></i></span>
                                       </a>
                                       <button class="btn btn-default mt-sweetalert red" data-toggle="tooltip" title="Eliminar" data-title="¿Está seguro de eliminar este registro?" data-type="warning" data-allow-outside-click="true" data-show-confirm-button="true" data-show-cancel-button="true"
-                                              data-url-action="@Url.Action("$ModelName$Delete", new { id = item.Id$ModelName$ })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
+                                              data-url-action="@Url.Action("$ModelName$Delete", new { id = item.$ModelName$Id })" data-cancel-button-class="btn-danger" data-cancel-button-text='No' data-confirm-button-text='Si' data-confirm-button-class="btn-info">
                                           <i class="icon-trash"></i>
                                       </button>
                                     </div>

@@ -1,9 +1,9 @@
 ﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>Model</Title>
+    <Title>ModelCreate</Title>
     <Author>Jose Chacon</Author>
     <Description>Define un Modelo con EntityFramework</Description>
-    <Shortcut>alpmdl</Shortcut>
+    <Shortcut>alpmdlcreate</Shortcut>
   </Header>
   <Snippet>
     <Declarations>
@@ -50,17 +50,17 @@
       <Literal>
         <ID>EsquemaName</ID>
         <ToolTip>Nombre del esquema</ToolTip>
-        <Default>Application</Default>
+        <Default>Transport</Default>
       </Literal>
     </Declarations>
     <Code Language="csharp">
-      <![CDATA[using AdministracionRuta.Common.Base;
+      <![CDATA[using $LibraryName$.Base.Classes;
 using Newtonsoft.Json;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace $LibraryName$.Models.$EsquemaName$
+namespace $LibraryName$.Business.$EsquemaName$.Models
 {
     [Table("$Model$s")]
     public class $Model$ : EntityBase
@@ -71,9 +71,9 @@ namespace $LibraryName$.Models.$EsquemaName$
         }
         #endregion
 
-        #region Propiedades
+        #region Properties
         [Key]
-        public int Id$Model$ { get; set; }
+        public int $Model$Id { get; set; }
 
         [Display(Name = "$DescripcionProp1$")]
         public $TipoDato1$ $Propiedad1$ { get; set; }
@@ -82,10 +82,10 @@ namespace $LibraryName$.Models.$EsquemaName$
         public $TipoDato2$ $Propiedad2$ { get; set; }
         #endregion
         
-        #region Propiedades Foraneas
+        #region Foreign Properties
         #endregion
         
-        #region Propiedades Relacionales
+        #region Relational Properties
         #endregion
     }
 }

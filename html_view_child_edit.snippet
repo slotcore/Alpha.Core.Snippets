@@ -2,7 +2,7 @@
   <Header>
     <Title>ViewChildEdit</Title>
     <Author>Jose Chacon</Author>
-    <Shortcut>vwchldedt</Shortcut>
+    <Shortcut>alpviewchldedt</Shortcut>
     <Description>Agrega una página de edición para un modelo hijo</Description>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -91,7 +91,7 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <a asp-action="$ModelParentName$Details" asp-route-id="@Model.Id$ModelParentName$">$ModelParentDescription$ (@Model.$ModelParentName$.$PropParentName$)</a>
+        <a asp-action="$ModelParentName$Details" asp-route-id="@Model.$ModelParentName$Id">$ModelParentDescription$ (@Model.$ModelParentName$.$PropParentName$)</a>
         <i class="fa fa-circle"></i>
     </li>
     <li>
@@ -113,8 +113,8 @@
                 <form asp-action="$ModelName$Edit" class="form-horizontal" role="form">
                     <div class="form-body">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="Id$ModelName$" />
-                        <input type="hidden" asp-for="Id$ModelParentName$" />
+                        <input type="hidden" asp-for="$ModelName$Id" />
+                        <input type="hidden" asp-for="$ModelParentName$Id" />
 
                         <div class="form-group">
                             <label asp-for="$PropName1$" class="control-label col-md-3"></label>
